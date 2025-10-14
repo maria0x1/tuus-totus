@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+:root {
+    --primary-color: #0069B3;
+}
+
+.fundo-azul {
+    background-image: url("/img/padrao.png");
+    background-repeat: repeat;
+    background-color: #0069B3;
+
+}
+
+.corpo-pagina {
+    background-color: white;
+    margin: 30px 30px;
+    min-height: calc(100vh - 80px);
+    box-shadow: 0 0 15em rgb(0, 0, 0, 0, 1);
+}
+
+.topo-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.logo-totus {
+    width: 150px;
+    height: 150px;
+    margin-right: 5px;
+
+}
+
+.banner-santos {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+}
+
+.botao-mural {
+    width: 150px;
+    background-color: #0A446D;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-style: normal;
+    color: white;
+    border: none;
+    padding: 7px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.slider {
+    display: block;
+    height: 293px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+.slider ul {
+    list-style: none;
+    position: absolute;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: auto;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    background-color: #000;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: index 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+
+.slider li:nth-child(4) label {
+    left: 110px;
+}
+
+.slider li:nth-child(5) label {
+    left: 150px;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked~img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
