@@ -10,6 +10,15 @@ body {
 
 :root {
     --primary-color: #0069B3;
+    --azul-escuro: #0A446D;
+    --vermelho-escuro: #B80000;
+    font-size: 62.5%;
+
+    --slides: 5;
+    --clones: 3;
+    --total-slides: calc(var(--slides) + var(--clones));
+    --tempo-por-slide: 10s;
+    --tempo-animacao-total: calc(var(--total-slides) * var(--tempo-por-slide));
 }
 
 .fundo-azul {
@@ -21,7 +30,7 @@ body {
 
 .corpo-pagina {
     background-color: white;
-    margin: 30px 30px;
+    margin: 3rem 3rem;
     min-height: calc(100vh - 80px);
     box-shadow: 0 0 15em rgb(0, 0, 0, 0, 1);
 }
@@ -30,111 +39,75 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 10px;
+    padding: 0.5rem 1rem;
 }
 
 .logo-totus {
-    width: 150px;
-    height: 150px;
+    width: 15rem;
+    height: 15rem;
     margin-right: 5px;
 
 }
 
-.banner-santos {
-    width: 100%;
-    display: block;
-    margin-top: 10px;
-}
-
 .botao-mural {
-    width: 150px;
+    width: 15rem;
     background-color: #0A446D;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 700px;
+    font-weight: 70rem;
     font-style: normal;
-    color: white;
     border: none;
-    padding: 7px 30px;
-    font-size: 14px;
+    padding: 0.7rem 3rem;
+    font-size: 1.4rem;
     cursor: pointer;
-    border-radius: 20px;
-    font-weight: 500;
+    border-radius: 2rem;
+    font-weight: 50rem;
 }
 
-a {
+.botao-link {
     text-decoration: none;
     color: white;
 }
 
-.slider {
-    display: block;
-    height: 293px;
-    width: 600px;
-    margin: auto;
-    margin-top: 20px;
+.carrossel {
+    width: 80%;
+    max-width: 100rem;
+    margin: 0 auto;
+    overflow: hidden;
     position: relative;
+    border: 1px solid #ccc;
 }
 
-.slider ul {
-    list-style: none;
-    position: absolute;
+.carrossel__interior {
+    width: calc(100%*var(--total-slides));
+    display: flex;
 }
 
-.slider li {
-    list-style: none;
-    position: absolute;
+.carrossel__slide {
+    flex-shrink: 0;
 }
 
-.slider img {
-    margin: auto;
-    height: 100%;
-    width: 100%;
-    vertical-align: auto;
-}
-
-.slider input {
-    display: none;
-}
-
-.slider label {
-    background-color: #000;
-    bottom: 10px;
-    cursor: pointer;
+.carrossel__slide img {
     display: block;
-    height: 10px;
-    position: absolute;
-    width: 10px;
-    z-index: index 10;
+    width: 100%;
+    height: auto;
 }
 
-.slider li:nth-child(1) label {
-    left: 10px;
+@keyframes slide__automatico {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% / 8 * var(--total-slides)));
+    }
 }
 
-.slider li:nth-child(2) label {
-    left: 40px;
+.carrossel__interior {
+    animation: slide__automatico var(--tempo-animacao-total) infinite linear;
+    animation-play-state: running;
 }
 
-.slider li:nth-child(3) label {
-    left: 70px;
-}
-
-.slider li:nth-child(4) label {
-    left: 110px;
-}
-
-.slider li:nth-child(5) label {
-    left: 150px;
-}
-
-.slider img {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.slider li input:checked~img {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
+.carrossel__interior:hover {
+    animation-play-state: paused;
 }
