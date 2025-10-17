@@ -12,6 +12,10 @@ body {
     --primary-color: #0069B3;
     --azul-escuro: #0A446D;
     --vermelho-escuro: #B80000;
+    --fonte-padrao: "Inter", sans-serif;
+    --fonte-destaque: "IM Fell English SC", sans-serif;
+    --corpo-texto: "Poppins", sans-serif;
+    --nome-santo: "Imbue", sans-serif;
     font-size: 62.5%;
 
     --slides: 5;
@@ -31,7 +35,7 @@ body {
 .corpo-pagina {
     background-color: white;
     margin: 3rem 3rem;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 8rem);
     box-shadow: 0 0 15em rgb(0, 0, 0, 0, 1);
 }
 
@@ -52,7 +56,7 @@ body {
 .botao-mural {
     width: 15rem;
     background-color: #0A446D;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fonte-padrao);
     font-optical-sizing: auto;
     font-weight: 70rem;
     font-style: normal;
@@ -110,4 +114,67 @@ body {
 
 .carrossel__interior:hover {
     animation-play-state: paused;
+}
+
+.texto {
+    margin: 2rem 2rem;
+}
+
+h2 {
+    font-family: var(--fonte-destaque);
+    font-size: 5rem;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+    font-size: 2rem;
+    margin: auto 6rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: var(--fonte-padrao);
+    font-weight: 900;
+    color: var(--vermelho-escuro);
+    font-size: 10rem;
+    text-align: center;
+}
+
+.mural {
+    display: grid;
+    margin: auto 3rem;
+    margin-top: 1rem 5rem;
+    gap: 15rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    align-items: center;
+}
+
+
+.mural__retrato img {
+    width: 35rem;
+}
+
+.mural__retrato img:hover {
+    transition: 2s;
+    transform: translateY(-1em);
+
+}
+
+.mural__retrato h4 {
+    text-align: center;
+    font-family: var(--nome-santo);
+    font-size: 4rem;
+}
+
+footer,
+footer p {
+    background-color: black;
+    color: white;
+    font-family: var(--nome-santo);
+    font-size: 3rem;
+    text-align: center;
 }
