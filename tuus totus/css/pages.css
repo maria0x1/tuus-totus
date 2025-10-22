@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #0069B3;
+    --azul-escuro: #0A446D;
+    --vermelho-escuro: #B80000;
+    font-size: 62.5%;
+
+    --fonte-padrao: "Inter", sans-serif;
+    --fonte-destaque: "IM Fell English SC", sans-serif;
+    --corpo-texto: "Poppins", sans-serif;
+    --nome-santo: "Imbue", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.fundo-azul {
+    background-image: url("/img/padrao.png");
+    background-repeat: repeat;
+    background-color: #0069B3;
+
+}
+
+.corpo-pagina {
+    background-color: white;
+    margin: 3rem 3rem;
+    min-height: calc(100vh - 8rem);
+    box-shadow: 0 0 15em rgb(0, 0, 0, 0, 1);
+}
+
+.topo-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.logo-totus {
+    width: 15rem;
+    height: 15rem;
+    margin-right: 5px;
+
+}
+
+.botao-mural {
+    width: 15rem;
+    background-color: #0A446D;
+    font-family: var(--fonte-padrao);
+    font-optical-sizing: auto;
+    font-weight: 70rem;
+    font-style: normal;
+    border: none;
+    padding: 0.7rem 3rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    font-weight: 50rem;
+}
+
+.botao-link {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 2rem;
+}
+
+
+.cabecalho {
+    text-align: center;
+    font-family: var(--fonte-padrao);
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 0.3rem solid #cc0000;
+}
+
+.cabecalho h1 {
+    color: #cc0000;
+    font-weight: 900;
+    font-size: 8rem;
+    margin: 0;
+}
+
+.perfil__container {
+    display: flex;
+    max-width: 100rem;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.8rem;
+
+}
+
+.perfil__imagem {
+    flex: 0 0 35rem;
+    max-width: 35rem;
+    min-width: 25rem;
+}
+
+.perfil__imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+texto {
+    flex-grow: 1;
+    padding-top: 1rem;
+}
+
+.perfil__texto h2 {
+    padding: 4rem;
+    text-align: justify;
+    color: #333;
+    font-family: var(--fonte-padrao);
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 0.1rem solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.citacao {
+    border-left: 0.5rem solid #cc0000;
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-family: var(--fonte-padrao);
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.citacao p {
+    margin: 0;
+}
+
+.container__principal {
+    display: flex;
+    max-width: 120rem;
+    margin: 4rem auto;
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+.conteudo__principal {
+    flex: 1;
+    min-height: 60rem;
+}
+
+.navegacao__lateral {
+    width: 25%;
+    padding: 2rem;
+    position: sticky;
+    top: 2rem;
+    z-index: 10;
+}
+
+.navegacao__lateral li {
+    list-style: none;
+}
+
+.navegacao__lateral a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    .perfil-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .perfil-imagem,
+    .perfil-imagem img {
+        max-width: 100%;
+    }
+
+    .perfil-imagem {
+        flex: auto;
+        margin-bottom: 2rem;
+    }
+
+    .cabecalho h1 {
+        font-size: 2em;
+    }
+}

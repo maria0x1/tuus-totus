@@ -128,7 +128,7 @@ h2 {
 }
 
 p {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: justify;
     font-size: 2rem;
     margin: auto 6rem;
@@ -158,23 +158,48 @@ h1 {
     width: 35rem;
 }
 
-.mural__retrato img:hover {
-    transition: 2s;
-    transform: translateY(-1em);
-
-}
-
 .mural__retrato h4 {
     text-align: center;
     font-family: var(--nome-santo);
     font-size: 4rem;
 }
 
+.mural__retrato--animacao {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.mural__retrato--animacao:hover {
+    color: var(--vermelho-escuro);
+}
+
+.mural__retrato--animacao::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.3rem;
+    background-color: var(--vermelho-escuro);
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.mural__retrato--animacao:hover::after {
+    width: 100%;
+}
+
 footer,
 footer p {
+    margin: 2rem;
     background-color: black;
-    color: white;
-    font-family: var(--nome-santo);
-    font-size: 3rem;
+    color: #333;
+    font-family: var(--corpo-texto);
+    font-size: 2rem;
     text-align: center;
+    padding-top: 1rem;
+    padding-block-end: 1rem;
+    padding-inline-end: 1rem;
 }
